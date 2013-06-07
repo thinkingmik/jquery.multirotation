@@ -1,0 +1,36 @@
+{
+    "name": "multirotation",
+    "title": "jQuery Multirotation",
+    "description": "This is a jQuery plugin to rotate page elements by a given angle.",
+    "keywords": [
+        "rotations",
+        "multirotation",
+		"angle",
+		"rotate"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Michele Andreoli",
+        "url": "http://www.jabprogramming.com"
+    },
+    "maintainers": [
+        {
+            "name": "Michele Andreoli",
+            "email": "michi.andreoli@gmail.com",
+            "url": "http://www.jabprogramming.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "GPL",
+            "url": "http://opensource.org/licenses/gpl-license-php GNU Public License"
+        }
+    ],
+    "bugs": "https://github.com/mandreoli/jquery.multirotation/issues",
+    "homepage": "https://github.com/mandreoli/jquery.multirotation",
+    "docs": "https://github.com/mandreoli/jquery.multirotation",
+    "download": "http://code.mandreoli.com/#multirotation",
+    "dependencies": {
+        "jquery": ">=1.6.2"
+    }
+}

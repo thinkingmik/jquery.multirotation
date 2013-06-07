@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Multirotation test</title>
+        <script type="text/javascript" src="jquery/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="jquery.multirotation-1.0.0.js"></script>
+    </head>
+    <style type="text/css">
+        div{text-align:center;margin:auto}
+        div.container{position:relative;margin:auto;width:210px;height:210px;border:solid 1px #000;}
+        div.rotable{position:absolute;left:5px;top:92px}
+        img{border:none;}
+    </style>
+    <body>
+        <div>
+            <br/>
+            <input title="+45 deg" type="button" onclick="return plus('#img_test');" value="+rotate"/>
+            <input title="-45 deg" type="button" onclick="return minus('#img_test');" value="-rotate"/>
+            <input title="set to 0 deg" type="button" onclick="return reset('#img_test');" value="reset"/>
+
+            <div class="container">
+			<div id="img_test" class="rotable">
+                    <a title="go to home page" href="http://jabprogramming.com/jsclasses/multi-rotation"><img alt="jabprogramming.com" src="http://jabprogramming.com/other/banner_s.png" /></a>
+            	</div>
+            </div>
+            <p id="degs"></p>
+        </div>
+    </body>
+    <!--
+     * USAGE:
+     *  The element selected with $(selector) must have an ID:
+     *  $(selector).rotate({
+     *      angle: 90, //or negative degree
+     *      direction: true, //or false (is the same as negative degree)
+     *      speed: 0.5, //animation speed (not supported by IE5,6,7,8,9)
+     *  });
+     *
+     *  To reset rotation:
+     *  $(selector).clearRotation();
+     *
+     *
+     * EXAMPLE:
+     *  <div id="img_1" alt="the image" src="image_url"/>
+     *
+     *  $('#img_1').rotate({
+     *     angle: 90
+     *  });
+     *
+     *  $('#img_1').clearRotation();
+     *  var degs = $('#img_1').getCurrentDegrees();
+ -->
+    <script type="text/javascript">
+        function plus(id) {
+            $(id).rotate({ angle: 45 });
+            get(id);
+            return false;
+        }
+
+        function minus(id) {
+            $(id).rotate({ angle: 90, direction: false });
+            get(id);
+            return false;
+        }
+
+        function reset(id) {
+            $(id).clearRotation();
+            get(id);
+            return false;
+        }
+
+        function get(id) {
+            var degs = $(id).getCurrentDegrees();
+            $('p#degs').html("Current degs: <b>" + degs + "°</b>");
+        }
+    </script>
+</html>
