@@ -6,6 +6,5 @@ It may set proprietary style properties depending on the browser to make it work
 
 It can also set a rotation speed that defines the rate by which the element rotation angle is updated in browsers that support rotation animation.
 
-<h1>Documentation</h1>
-Read complete documentation at:
-<a href="http://jabprogramming.com/jsclasses/multi-rotation" title="documentation">multirotation plugin page.</a>
+<h1>Demo</h1>
+<a href="http://demo.thinkingmik.com/jquery/multirotation" title="demo">multirotation plugin page.</a>
